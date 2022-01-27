@@ -1,0 +1,16 @@
+
+pipeline {
+  agent {
+    node {
+      label 'dev001-agent'
+    }
+  }  
+  stages {
+    stage ('Build Java') {
+      steps {
+          echo "Build is : ${buildMode}"
+      }
+    }    
+  }
+}
+
